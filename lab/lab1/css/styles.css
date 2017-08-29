@@ -5,17 +5,18 @@
     }
     
     body {
-        background-color: black;
+        background-color: gray;
         color: white;
+        font-family: 'Arial';
     }
     
     footer {
-        color: gray;
+        color: white;
         clear: left;
     }
     
     h1 {
-        font-family: 'Pacifico', cursive;
+        font-family: 'Baloo Bhaijaan';
         font-size: 4em;
         margin-bottom: 0px;
     }
@@ -29,18 +30,18 @@
     }
     
     nav a:hover, #current {  /*pseudo class*/
-         border-bottom:2px orange solid;
+         border-bottom:2px red solid;
          font-size: 2em;
          transition: .9s;
     }
     
-    aside, section {
+    aside, section{
         float:left;
     }
     
     aside {
         text-align: left;
-        padding-left: 10px;
+        padding-left: 20px;
         padding-top:  50px;
         width:200px;
         font-size: 1.3em;
@@ -56,7 +57,7 @@
     }
     
     td strong {
-        color: orange;
+        color: red;
     }
     
     ul {
@@ -69,13 +70,13 @@
     }
     
     #table-header {
-        background-color: #351a00;
+        background-color: white;
     }
     
     .table-row {
-        background-color: #753900;
+        background-color: light gray;
     }
     
     .hobby {
-        color: yellow;
+        color: black;
     }
