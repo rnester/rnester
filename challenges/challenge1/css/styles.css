@@ -1,0 +1,23 @@
+header {
+    color: yellow;
+    font-family: 'Pacifico'; 
+    text-align: center;
+}
+
+body {
+    background-color: black;
+    color: yellow;
+    font-family: 'Pacifico'; 
+
+}
+
+img {
+    width:420px; 
+    height: auto;
+}
+
+#spring{
+    border-top-right-radius: 25px;
+}
+
+

@@ -1,0 +1,54 @@
+
+header {
+    background-color: #2A2929;
+    color:white;
+    text-align:center;
+    font-family: 'Myriad Pro';
+}
+
+nav {
+    font-family: 'Myriad Pro';
+}
+
+footer {
+    background-color:white;
+    color:gray;
+    clear:both;
+    text-align:center;
+    padding:5px;
+    
+}
+
+
+a:link, a:visited {
+   
+    color: white;
+    padding: 14px 25px;
+    text-align: center;	
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+a:hover, a:active {
+    background-color: #B2FF53;
+}
+
+.jumbotron {
+    color:white;
+    background-image: url("http://www.publicdomainpictures.net/pictures/160000/velka/ordinateur-de-bureau-pc-1456070535WEH.jpg");
+}
+
+h2 {
+    color: #1473E6;
+}
+
+.row {
+    text-align: center; 
+}
+
+
+body {
+    background-color:#363636;
+}
+
