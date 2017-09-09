@@ -1,0 +1,43 @@
+<?php
+
+function displayRandomColor 
+
+
+?>
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Random Background Color</title>
+        
+          
+        <style type="text/css">
+        body{
+            
+        /*background-color: rgba(200, 15, 14, .6);*/
+         
+        <?php
+        
+        $red = rand(0, 255);
+        $green = rand(0,255);
+        $blue = rand(0, 255);
+        $alpha = rand(0,100)/100;
+        
+        echo "background-color: rgba(". rand(0,255) . ", " . rand(0,255) . ", " . rand(0,255) . ", " . .3)";
+        
+        ?>
+        
+        
+        
+        }
+        </style>
+        
+    </head>
+    <body>
+      
+      <h1>Welcome!</h1>
+        
+
+    </body>
+</html>
