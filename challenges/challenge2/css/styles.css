@@ -1,0 +1,42 @@
+    
+    #reel1,  #reel3 {
+        position:absolute;
+    
+    }
+ #reel1{
+        left:145px;
+    }
+   
+    #reel3{
+        left:357px;
+    }
+    
+    body {
+        margin: auto;
+    }
+    
+#human{
+    display: inline-block;
+    position:relative;
+    margin-left: 55px;
+    font-size: 150%;
+}
+#Computer{
+    display: inline-block;
+    position:relative;
+    font-size: 150%;
+}
+
+    #main {
+        width:600px;
+        height:500px;
+        position:relative;
+        margin:0 auto;
+    }
+    h1{
+        text-align: center;
+        margin-right:20%;
+    }
+    input{
+        margin-right:20%;
+    }
