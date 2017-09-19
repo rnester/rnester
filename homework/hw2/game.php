@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Homework 3</title>
+        <title>Homework 2</title>
         <link href="css/styles.css" rel="stylesheet" type="text/css" />
         <link rel="shortcut icon" href="http://2.bp.blogspot.com/-oP7HrKAuibk/US-3SOUUcCI/AAAAAAAAE8A/T6TvIQCYHmE/s1600/mario_pixelart2.png" type="image/png">
     </head>
     
 <body>
 <title1>
-    <h1><center>Homework 3</center></h1>
+    <h1><center>Homework 2</center></h1>
 </title1>
 
 
@@ -183,7 +183,7 @@
 ?>
 <center>
 <h2>                 
-<a href="https://cst352-rnester.c9users.io/rnester/homework/hw2/game.php">Play Again</a>                   
+<a href="http://rnester-cst352.herokuapp.com/homework/hw2/game.php">Play Again</a>                   
 </h2>      
 </center>
 </body>
