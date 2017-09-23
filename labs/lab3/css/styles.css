@@ -1,0 +1,21 @@
+body {
+    display: block;
+    text-align: center;
+}
+
+
+
+img {
+    width: 100px;
+    margin: 0px 10px;
+}
+
+.hand {
+    font-size: 1.5em;
+    padding: 20px 0px;
+}
+
+.ace {
+    border: yellow 2px solid;
+}
+
