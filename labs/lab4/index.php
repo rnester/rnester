@@ -1,23 +1,18 @@
 <?php
-    $backgroundImg = "img/sea.jpg"; // default bg image
+    $backgroundImg = "img/sea.jpg";
     
     // API call goes here
-    if (isset ($_GET['keyword'])) { // if receives 'keyword' value
+    if (isset ($_GET['keyword'])) {
         
-        include 'api/pixabayAPI.php'; // use API php file code
-        $imageURLs = getImageURLs($_GET['keyword']); // assign $imageURLs to function getImageURLs, pass thru 'keyword' value of _GET array
-        $backgroundImg = $imageURLs[array_rand($imageURLs)]; // assign $backgroundImg by Keyword
+        include 'api/pixabayAPI.php';
+        $imageURLs = getImageURLs($_GET['keyword']);
+        $backgroundImg = $imageURLs[array_rand($imageURLs)];
+        $keyword = $_GET['keyword'];
         
-        // print_r($imageURLs); // shows content of array
-        // echo "You searched for: " . $_GET['keyword']; // show keyword value typed in
-    
-        $keyword = $_GET['keyword']; // default 
-        
-        if (!empty($_GET['category']) ) {  // if a category was selected, NOT empty
-          $keyword = $_GET['category']; // default to category
+        if (!empty($_GET['category']) ) {
         }
         
-        if (isset($_GET['layout'])) { // if layout is selected
+        if (isset($_GET['layout'])) {
           $imageURLs = getImageURLs($keyword, $_GET['layout']);
         } else {
            $imageURLs = getImageURLs($keyword);
@@ -37,15 +32,10 @@
         <style>
             @import url('css/styles.css');
             body {
-                background-image: url('<?=$backgroundImg?>'); /* set background img to whatever value of $backgroundImg is */
+                background-image: url('<?=$backgroundImg?>'); 
                 background-size: cover;
-            
             }
-            
-            form{
-                color:black;
-                
-            }
+
         </style>
     </head>
     
@@ -72,16 +62,15 @@
             <input type="submit" value="Submit">
         </form>
         <?php
-            if(!isset($imageURLs)) { // if value of $imageURLs has NOT been set, show msg below
+            if(!isset($imageURLs)) { 
                 
                 echo "<h2>Type a keyword to display a slideshow <br /> with random images from Pixabay.com</h2>";
             } 
-            else { // otherwise, show images
-                // Display carousel here
+            else { 
         ?>
         
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <!-- Indicators here -->
+    
             <ol class="carousel-indicators">
                 <?php
                     for ($i = 0; $i < 7; $i++) {
@@ -92,7 +81,7 @@
                 ?>
             </ol>
             
-            <!-- Wrapper for images -->
+           
             <div class="carousel-inner" role="listbox">
                 <?php
                     for ($i = 0; $i < 5; $i++) {
@@ -107,11 +96,11 @@
                         echo '<img src="' . $imageURLs[$randomIndex] . '">';
                         echo '</div>';
                         unset($imageURLs[$randomIndex]);
-                    } // end of for loop
+                    }
                 ?>
             </div>
             
-            <!-- Controls here -->
+       
             <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
@@ -124,12 +113,12 @@
         
         
         <?php
-            } // end of else statement
+            }
         ?>
         
-        <!-- jQuery -->
+      
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!-- Bootstrap JavaScript -->
+        
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </center>
     </body>
