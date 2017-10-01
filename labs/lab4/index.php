@@ -1,15 +1,15 @@
 <?php
     $backgroundImg = "img/sea.jpg";
     
-    // API call goes here
     if (isset ($_GET['keyword'])) {
         
         include 'api/pixabayAPI.php';
-        $imageURLs = getImageURLs($_GET['keyword']);
-        $backgroundImg = $imageURLs[array_rand($imageURLs)];
+        $imageURLs = getImageURLs($_GET['keyword']); 
+        $backgroundImg = $imageURLs[array_rand($imageURLs)]; 
         $keyword = $_GET['keyword'];
         
         if (!empty($_GET['category']) ) {
+          $keyword = $_GET['category'];
         }
         
         if (isset($_GET['layout'])) {
@@ -18,30 +18,32 @@
            $imageURLs = getImageURLs($keyword);
         }
         
-    } // If
+    }
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Lab 4 Pixabay Slideshow </title>
+        <title> Lab 4 - Pixabay Slideshow </title>
         <link href="css/styles.css" rel="stylesheet" type="text/css" />
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        
         
         <style>
             @import url('css/styles.css');
             body {
-                background-image: url('<?=$backgroundImg?>'); 
+                background-image: url('<?=$backgroundImg?>');
                 background-size: cover;
             }
-
+            
+            form {
+                color:black;
+                background-color: gray;
+            }
         </style>
     </head>
     
     <body>
-        <center>
-        <br /><br />
+   <br><br><br><br><br><br><br>
         <form>
             
             <input type="text" name="keyword" placeholder="Keyword" required>
@@ -62,7 +64,7 @@
             <input type="submit" value="Submit">
         </form>
         <?php
-            if(!isset($imageURLs)) { 
+            if(!isset($imageURLs)) {
                 
                 echo "<h2>Type a keyword to display a slideshow <br /> with random images from Pixabay.com</h2>";
             } 
@@ -70,7 +72,7 @@
         ?>
         
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    
+       
             <ol class="carousel-indicators">
                 <?php
                     for ($i = 0; $i < 7; $i++) {
@@ -81,7 +83,7 @@
                 ?>
             </ol>
             
-           
+        
             <div class="carousel-inner" role="listbox">
                 <?php
                     for ($i = 0; $i < 5; $i++) {
@@ -100,7 +102,7 @@
                 ?>
             </div>
             
-       
+         
             <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
@@ -115,11 +117,9 @@
         <?php
             }
         ?>
-        
-      
+    
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    </center>
+
     </body>
 </html>
